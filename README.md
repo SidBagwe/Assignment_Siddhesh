@@ -40,8 +40,23 @@ python scraping_Siddhesh.py --commodity=Onion --start_date=01-Jan-2020 --end_dat
 
 ## SQL
 
-Write a single SQL query to return the top 5 states for 4 commodities (Potato, Onion, Wheat, tomato) – Output should contain 20 records only
+### Write a single SQL query to return the top 5 states for 4 commodities (Potato, Onion, Wheat, tomato) – Output should contain 20 records only
 
+SELECT
+  commodity,
+  state,
+  MAX(modal_price) AS max_modal_price
+FROM
+  agmarket_monthly
+  
+WHERE
+  commodity IN ('Potato', 'Onion', 'Wheat', 'Tomato')
+GROUP BY
+  commodity,
+  state
+ORDER BY
+  max_modal_price DESC
+LIMIT 20;
 
 
 # Part-2 Milkrun Prediction Project
