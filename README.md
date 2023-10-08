@@ -38,6 +38,11 @@ Run the script below to run the file
 python scraping_Siddhesh.py --commodity=Onion --start_date=01-Jan-2020 --end_date=12-Apr-2022 --time_agg=monthly --states=Maharashtra
 ```
 
+## SQL
+
+Write a single SQL query to return the top 5 states for 4 commodities (Potato, Onion, Wheat, tomato) – Output should contain 20 records only
+
+
 
 # Part-2 Milkrun Prediction Project
 
